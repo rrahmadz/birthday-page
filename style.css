@@ -1,0 +1,352 @@
+*, html {
+  --primary: #282a36;
+  --secondary: #ff79c6;
+  --text: #f8f8f2;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary);
+}
+
+.wrap{
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 20%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  animation: rotate 13s linear infinite;
+}
+
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.wrap img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: .3s ease;
+  cursor: pointer;
+}
+
+.wrap img:hover{
+  transform: scale(1.3);
+  filter: grayscale(0%);
+}
+
+.container{
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  padding: 0 0%;
+  background-image: url("https://i.gifer.com/ZOHV.gif");
+  z-index: 2;
+}
+
+.container .ombak img {
+  width: 100vw;
+  height: 130px;
+  display: flex;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 50%;
+  z-index: 1;
+}
+
+.content{
+  height: auto;
+  transform: translateY(50%, 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 76%;
+}
+
+.content p{
+  font-size: 1.1rem;
+  text-align: center;
+  position: relative;
+  color: var(--text);
+}
+
+.content h1{
+  font-size: 30px;
+  font-weight: 540;
+  text-align: center;
+  position: relative;
+  color: var(--text);
+}
+
+.content h1 span{
+  color: var(--secondary);
+}
+
+.content button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 2px solid var(--secondary);
+  outline: none;
+  color: var(--secondary);
+  cursor: pointer;
+  position: absolute;
+  box-shadow: 3px 3px 3px 0px #ff79c6;
+  padding: 4px 9px;
+  border-radius: 10px;
+  top: 68%;
+  right: 10%;
+}
+
+.content button img{
+  width: 20px;
+  margin-left: 6px;
+}
+
+.inactive{
+  opacity: .5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.content button:hover{
+  border: 2px solid var(--text);
+  background-color: var(--secondary);
+  color: var(--text);
+  transform: scale(1.04);
+  animation: button .3s ease-in-out;
+  animation-delay: .3s
+}
+
+.launch-time{
+  display: flex;
+  color: var(--text);
+  gap: 1.7em;
+}
+
+.launch-time div{
+  flex-basis: 100%;
+  text-align: center;
+  color: var(--text);
+}
+
+.launch-time div p{
+  font-size: 52px;
+  color: var(--text);
+  margin-bottom: -6px;
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.launch-time div span{
+  font-size: 14px;
+  color: var(--text);
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.button1 {
+  width: 120px;
+  border: 2px solid tomato;
+  background-color: transparent;
+  color: var(--text);
+  border-radius: 50% 50% 50% 50%;
+  padding: 4px 9px;
+  position: fixed;
+  margin: 50% 50% 50% 50%;
+}
+
+.wraps {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #111111;
+  color: var(--text);
+}
+
+.cards .red {
+  background-color: #ff79c6;
+}
+
+.cards .blue {
+  background-color: #50fa7b;
+}
+
+.cards .green {
+  background-color: #f8f8f2;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 125px;
+  width: 250px;
+  border-radius: 10px;
+  color: #282a36;
+  cursor: pointer;
+  transition: 400ms;
+  padding: 8px;
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card p.second-text {
+  font-size: .7em;
+  font-family: monospace;
+}
+
+.myprofile .mapro {
+  position: absolute;
+  font-size: .7em;
+  top: 30px;
+  left: 60px;
+}
+
+.cards .myprofile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px; 
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.back {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 5px;
+  color: #f8f8f2;
+  border: 2px solid #ff79c6;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  z-index: 1;
+}
+
+.back img{
+  width: 35px;
+  height: 35px;
+}
+
+.back:hover {
+  border: 2px solid var(--text);
+  background-color: var(--secondary);
+  color: var(--text);
+  box-shadow: 2px 2px 2px 0px #ff79c6;
+  transform: scale(1.04);
+  animation: button .3s ease-in-out;
+  animation-delay: .3s
+}
+    
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
+
+.content1 button{
+  z-index: 9999;
+  background: transparent;
+  border: 2px solid var(--secondary);
+  outline: none;
+  color: var(--secondary);
+  cursor: pointer;
+  box-shadow: 3px 3px 3px 0px var(--secondary);
+  padding: 4px 9px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.content1 button:hover{
+  border: 2px solid var(--text);
+  background-color: var(--secondary);
+  color: var(--text);
+  transform: scale(1.04);
+  animation: button .3s ease-in-out;
+  animation-delay: .3s
+}
+
+.next {
+  width: 250px;
+  height: 90px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  padding: 5px;
+  color: var(--text);
+  border: 1px solid var(--secondary);
+  cursor: pointer;
+  z-index: 3;
+}
+
+.next img{
+  width: 80px;
+  height: 80px;
+}
+
+.next:hover {
+  background-color: var(--secondery);
+  color: var(--secondary);
+  border: 1px solid var(--text);
+  animation: .3 ease;
+}
